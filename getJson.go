@@ -6,6 +6,7 @@ import (
 	"time"
 )
 
+// https://stackoverflow.com/questions/17156371/how-to-get-json-response-from-http-get
 func getJson(url string, target interface{}) error {
 	var myClient = &http.Client{Timeout: 10 * time.Second}
 	r, err := myClient.Get(url)
